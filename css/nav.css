@@ -1,0 +1,18 @@
+/* nav.css - styles for active nav item */
+nav a.active {
+  color: #ffeb3b; /* highlight color */
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* optional: give a subtle background for active link */
+nav a.active::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: middle;
+}
