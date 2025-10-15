@@ -1,4 +1,5 @@
 /* nav.css - styles for active nav item */
+@import url('fonts.css');
 nav a.active {
   color: #ffeb3b; /* highlight color */
   text-decoration: underline;
@@ -16,3 +17,70 @@ nav a.active::after {
   margin-left: 8px;
   vertical-align: middle;
 }
+
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 28px;
+  height: 28px;
+  background-image: url('assests/circlelogo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+
+body {
+  background-image: url('assests/bellpattern.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
+}
+
+
+body.has-custom-cursor { cursor: none; }
+
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-image: url('assests/paddle.png');
+  background-size: cover;
+  background-position: center;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 120ms ease-out, opacity 160ms ease-out;
+  z-index: 2147483647; 
+  mix-blend-mode: normal;
+  will-change: transform, opacity;
+  display: none; 
+}
+
+.custom-cursor.cursor-hover { transform: translate(-50%, -50%) scale(1.3); }
+.custom-cursor.cursor-hidden { opacity: 0; }
+
+/* Floating side image (parallax-ish) */
+.floating-image {
+  position: fixed;
+  right: 18px;
+  top: 30vh;
+  width: 180px;
+  max-width: 22vw;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transform: translateY(0);
+  transition: transform 200ms linear;
+  z-index: 9999;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+

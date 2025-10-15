@@ -1,0 +1,19 @@
+/* fonts.css - load custom PODIUM sharp font
+   Place the font files (woff2/woff/ttf) in css/fonts/ with the names below.
+   If you do not have the font files, the page will fall back to Courier New / monospace.
+*/
+
+@font-face {
+  font-family: 'PODIUM sharp';
+  src: url('fonts/PODIUM-sharp.woff2') format('woff2'),
+       url('fonts/PODIUM-sharp.woff') format('woff'),
+       url('fonts/PODIUM-sharp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Use the custom font site-wide, with sensible fallbacks */
+body {
+  font-family: 'PODIUM sharp', 'Courier New', monospace;
+}

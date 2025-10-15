@@ -1,7 +1,15 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background-color: #8e96de;
+  color: #111;
+}
+
+@import url('fonts.css');
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', monospace;
   background-color: #8e96de;
   color: #111;
 }
@@ -58,6 +66,7 @@ nav a:hover {
 .yellow { background-color: #f1c232; }
 
 .content-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 20px;
   text-align: center;
 }
@@ -75,6 +84,9 @@ img {
   border-radius: 8px;
   margin-bottom: 16px;
 }
+
+
+
 
 
 

@@ -1,6 +1,8 @@
+@import url('fonts.css');
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Courier New', monospace;
   background-color: #76c59f; 
   color: #111;
 }
@@ -55,6 +57,7 @@ nav a:hover {
 .pink { background-color: #e25dc9; }
 
 .content-box {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 20px;
   text-align: left;
 }
