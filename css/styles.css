@@ -2,16 +2,18 @@ body {
   margin: 0;
   font-family: 'Courier New', monospace;
   background-color: #8e96de;
-  color: #111;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 @import url('fonts.css');
 
 body {
   margin: 0;
-  font-family: 'Courier New', monospace;
+  font-family: 'BBH Sans Hegarty', monospace;
   background-color: #8e96de;
-  color: #111;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 
@@ -84,6 +86,38 @@ img {
   border-radius: 8px;
   margin-bottom: 16px;
 }
+
+/* Intro section: image + text layout */
+.intro {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px;
+  max-width: 1100px;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+}
+.intro .intro-photo {
+  flex: 0 0 260px;
+  max-width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.intro .intro-text {
+  flex: 1 1 400px;
+  color: #111;
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .intro { flex-direction: column; padding: 20px; }
+  .intro .intro-photo { max-width: 100%; width: 100%; }
+}
+
+/* ensure intro text is white regardless of global body color */
+.intro .intro-text { color: #fff; }
 
 
 

@@ -41,7 +41,8 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
 }
 
 
@@ -82,5 +83,47 @@ body.has-custom-cursor { cursor: none; }
   pointer-events: auto;
   cursor: pointer;
 }
+
+/* Floating video box for homepage */
+.floating-video {
+  position: fixed;
+  left: 18px;
+  top: 30vh;
+  width: 220px;
+  max-width: 24vw;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  transform: translateY(0);
+  transition: transform 200ms linear;
+  z-index: 9999;
+  pointer-events: auto;
+  background: #000;
+}
+.floating-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .floating-video { display: none; }
+}
+
+/* Make the header navigation stick to the top while scrolling */
+header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000; /* above most elements */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* If any page needs content not to slide under a fixed header, add padding-top to main content.
+   If you use position: fixed instead of sticky, uncomment the rule below and adjust the value.
+main { padding-top: 64px; }
+*/
 
 

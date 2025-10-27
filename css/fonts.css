@@ -1,8 +1,9 @@
-/* fonts.css - load custom PODIUM sharp font
-   Place the font files (woff2/woff/ttf) in css/fonts/ with the names below.
-   If you do not have the font files, the page will fall back to Courier New / monospace.
-*/
+/* fonts.css - load custom PODIUM sharp and Google BBH Sans Hegarty fonts */
 
+/* Load Google Font */
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&display=swap');
+
+/* Load custom PODIUM sharp font */
 @font-face {
   font-family: 'PODIUM sharp';
   src: url('fonts/PODIUM-sharp.woff2') format('woff2'),
@@ -13,7 +14,7 @@
   font-display: swap;
 }
 
-/* Use the custom font site-wide, with sensible fallbacks */
+/* Use custom fonts site-wide, with sensible fallbacks */
 body {
-  font-family: 'PODIUM sharp', 'Courier New', monospace;
+  font-family: 'PODIUM sharp', 'BBH Sans Hegarty', 'Courier New', monospace;
 }
